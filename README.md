@@ -3,10 +3,11 @@
 Automated left ventricle segmentation and Fractional Shortening (FS) calculation from ultrasound M-Mode images using TSSwinUNet.
 
 ## Architecture
-###TSSwinUnet
+
+### TSSwinUnet
 <img width="1600" height="802" alt="image" src="https://github.com/user-attachments/assets/810e3af8-0587-4099-90a8-40f2fc2d4079" />
 
-###PTSBlock
+### PTSBlock
 <img width="1073" height="533" alt="image" src="https://github.com/user-attachments/assets/51ec70be-5bf2-41da-88df-60960018c176" />
 
 
