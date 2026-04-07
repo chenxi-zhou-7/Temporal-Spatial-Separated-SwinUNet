@@ -63,7 +63,7 @@ python visualize_fs.py --weight weight.pth --input image.tif --output-dir ./resu
 | `FS (%)` | Fractional shortening |
 
 ### Visualization 
-<img width="2780" height="1970" alt="0306_A16-2_FS_Visualization" src="https://github.com/user-attachments/assets/708aec0d-6a78-4d1f-9113-3a56e624f935" />
+<img width="2761" height="1970" alt="0306_A16-2_FS_Visualization" src="https://github.com/user-attachments/assets/5c00b0d0-397c-4f20-aac9-e3326ef8a6bc" />
 
 Four-panel figure per sample:
 
