@@ -539,9 +539,19 @@ def create_four_panel_figure(image_path, pred_mask, fs_result, sample_name,
     ax.plot(np.where(valid_bot)[0], bot_border[valid_bot],
             color="#C85250", linewidth=1.5, label="LVPW border")
 
-    for pair in fs_result["pairs"]:
-        ax.axvline(x=pair["peak_idx"], color="#1E8A5B", linestyle=":", alpha=0.5)
-        ax.axvline(x=pair["valley_idx"], color="#C85250", linestyle=":", alpha=0.5)
+    for i, pair in enumerate(fs_result["pairs"]):
+        pi_col = pair["peak_idx"]
+        vi_col = pair["valley_idx"]
+        if pi_col < w:
+            ax.axvline(x=pi_col, color="#1E8A5B", ls=":", lw=1.2, alpha=0.7)
+            ax.annotate(f"D{i+1}: {pair['lvid_d']*mm_per_px:.2f}mm", xy=(pi_col, 12),
+                        fontsize=7, color="#1E8A5B", fontweight="bold", ha="left",
+                        bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="#1E8A5B", alpha=0.85))
+        if vi_col < w:
+            ax.axvline(x=vi_col, color="#C85250", ls=":", lw=1.2, alpha=0.7)
+            ax.annotate(f"S{i+1}: {pair['lvid_s']*mm_per_px:.2f}mm", xy=(vi_col, 30),
+                        fontsize=7, color="#C85250", fontweight="bold", ha="left",
+                        bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="#C85250", alpha=0.85))
 
     ax.set_title(f"(d) Overlay with Borders ({fs_label})", fontsize=13, fontweight="bold")
     ax.axis("off")
