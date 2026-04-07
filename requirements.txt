@@ -1,0 +1,7 @@
+torch
+timm
+numpy
+opencv-python
+scipy
+matplotlib
+pillow
